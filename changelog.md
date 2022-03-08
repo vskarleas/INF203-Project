@@ -11,3 +11,11 @@
 * cow_university has a problem
 * crazy_cow is not completed. It needs to add the questions and add smart functionality.
 * smart_cow has been fixed. There is one error with the multiplication function right now.
+
+---
+
+**Version 1.7.1**
+
+* crazy_cow completed
+* cow_univeristy fixed
+* smart_cow fixed
