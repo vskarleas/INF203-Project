@@ -24,4 +24,11 @@
 
 **Version 2.0.1**
 
-* Part 4 programme 1 added
+* Part 4 programme 1 added (newcow.c)
+
+---
+
+**Version 2.1.0**
+
+* Programme 2 added (newcow_2.c)
+  * There is an error is line 12 and the comparison do not work. Check the comment
