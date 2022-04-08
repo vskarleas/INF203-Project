@@ -32,3 +32,16 @@
 
 * Programme 2 added (newcow_2.c)
   * There is an error is line 12 and the comparison do not work. Check the comment
+
+---
+
+**Version 2.2.0**
+
+* Programme newcow_2.c is now functional
+
+---
+
+**Version 2.3.0**
+
+* crazy_cow.sh is now functional
+* newcow_3.c is added that corresponds to the question 3 of the project file in C section (4th section). [NOT FINISHED YET]
