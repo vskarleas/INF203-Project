@@ -51,3 +51,9 @@
 **Version 3.1.0**
 
 * newcow_3.c is now completed. There are some final modifications that needs to be done.
+
+---
+
+**Version 3.1.2**
+
+* Question 4 (part c) - newcow_4.c was started.
