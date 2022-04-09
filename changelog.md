@@ -45,3 +45,9 @@
 
 * crazy_cow.sh is now functional
 * newcow_3.c is added that corresponds to the question 3 of the project file in C section (4th section). [NOT FINISHED YET]
+
+---
+
+**Version 3.1.0**
+
+* newcow_3.c is now completed. There are some final modifications that needs to be done.

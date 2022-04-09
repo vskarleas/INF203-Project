@@ -19,7 +19,6 @@ int main(int argc, char *argv[]){
                 printf("\\  ^__^\n \\ (%s)\\_______\n   (__)\\       )\\/\\\n       ||----w |\n       ||     ||\n",argv[2]);
             }
             else {
-                printf("I am in the -e");
                 affiche_vache();
             }
         }
