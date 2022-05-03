@@ -57,3 +57,8 @@
 **Version 3.1.2**
 
 * Question 4 (part c) - newcow_4.c was started.
+
+**Version 5.0.2**
+
+* Project is completed with Automate
+* Remains to finalise the animation question and the compte rendu.
