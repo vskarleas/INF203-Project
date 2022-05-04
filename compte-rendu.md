@@ -2,8 +2,7 @@
 
 ## Introduction
 
-On the UE course of INF203 under the general idea of
-learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.On the UE course of INF203 under the general idea of learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.
+On the UE course of INF203 under the general idea of learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.On the UE course of INF203 under the general idea of learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.
 
 ## Indications
 
@@ -118,6 +117,8 @@ In this section we are presenting the different challenges that we met and the w
 ## Code
 
 ### cow_kindergarten
+
+Version 1
 
 ```
 numbers="1 2 3 4 5 6 7 8 9 10"
@@ -844,12 +845,12 @@ int main(){
     int end_2=0;
     int digestion;
     int crop;
+    int lunchfood;
     int duree_de_vie=0;
     clearScreen();
     affiche_vache(etatcourant);
     while (stock>=0 && stock<=10) {
         printf("Stock: %d\n", stock);
-        int lunchfood;
         printf("De combien voulez-vous alimenter la vache? (valeur entre 0 et %d)\n",stock);
         scanf("%d", &lunchfood);
    
@@ -865,19 +866,17 @@ int main(){
         else if (etatcourant==-1){
             printf("Game over. Le niveau de fitness n'est pas entre les limites definis\n");
             break;
-        } else {
-            fitness=fitness_update(fitness,lunchfood,digestion);
-            stock=stock_update(stock,lunchfood,crop);
-            if (stock<=0){
-                printf("Le stock est vide.\n");
-                break;
-            }
-            else if (stock>=10) {
-                stock=10;
-            }
+        }
+        fitness=fitness_update(fitness,lunchfood,digestion);
+        stock=stock_update(stock,lunchfood,crop);
+        if (stock<=0){
+            printf("Le stock est vide.\n");
+            break;
+        }
+        else if (stock>=10) {
+            stock=10;
         }
         duree_de_vie++;
-        clearScreen();
     }
     printf("La vache etait en vie pour %d jours\n", duree_de_vie);
 }

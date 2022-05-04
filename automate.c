@@ -108,12 +108,12 @@ int main(){
     int end_2=0;
     int digestion;
     int crop;
+    int lunchfood;
     int duree_de_vie=0;
     clearScreen();
     affiche_vache(etatcourant);
     while (stock>=0 && stock<=10) {
         printf("Stock: %d\n", stock);
-        int lunchfood;
         printf("De combien voulez-vous alimenter la vache? (valeur entre 0 et %d)\n",stock);
         scanf("%d", &lunchfood);
    
@@ -129,19 +129,17 @@ int main(){
         else if (etatcourant==-1){
             printf("Game over. Le niveau de fitness n'est pas entre les limites definis\n");
             break;
-        } else {
-            fitness=fitness_update(fitness,lunchfood,digestion);
-            stock=stock_update(stock,lunchfood,crop);
-            if (stock<=0){
-                printf("Le stock est vide.\n");
-                break;
-            }
-            else if (stock>=10) {
-                stock=10;
-            }
+        }
+        fitness=fitness_update(fitness,lunchfood,digestion);
+        stock=stock_update(stock,lunchfood,crop);
+        if (stock<=0){
+            printf("Le stock est vide.\n");
+            break;
+        }
+        else if (stock>=10) {
+            stock=10;
         }
         duree_de_vie++;
-        clearScreen();
     }
     printf("La vache etait en vie pour %d jours\n", duree_de_vie);
 }
