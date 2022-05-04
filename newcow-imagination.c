@@ -60,22 +60,7 @@ int main(int argc, char *argv[]){
     int i,k,j;
     k = argc;
     if (k-1 == 2) {
-        if (!strcmp(argv[1],"-count")) {
-            for (i=0; code[i]!='\0'; i++){
-                if (!strcmp(argv[2],&code[i])){
-                    k=i;
-                }
-            }
-            clearScreen();
-            for (j=k; j>=0;) {
-                one(j);
-                sleep(2);
-                clearScreen();
-                j--;
-            }
-            affiche_vache("Coucou! Hello world");
-        }
-        else if (!strcmp(argv[1],"-e")){
+       if (!strcmp(argv[1],"-e")){
             int i,totChar;
             totChar = 0;
             for(i=0; argv[2][i] != '\0'; i++){
@@ -90,6 +75,20 @@ int main(int argc, char *argv[]){
         }
     }
     else {
-        affiche_vache(argv[1]);
+        if (!strcmp(argv[1],"-count")) {
+            printf("Donner un nombre entre 0 et 9\n");
+            scanf("%d", &k);
+            clearScreen();
+            for (j=k; j>=0;) {
+                one(j);
+                sleep(1);
+                clearScreen();
+                j--;
+            }
+            affiche_vache("Coucou! Hello world");
+        }
+        else {
+            affiche_vache(argv[1]);
+        }
     }
 }

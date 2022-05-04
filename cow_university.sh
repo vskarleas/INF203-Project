@@ -1,22 +1,4 @@
-
-isPremier(){
-    limnos=2
-    if [ $1 -gt 0 ]
-    then
-        karpa=$(( $1 % $i ))
-        while [ $limnos < $1 -a $karpa -ne 0 ]
-        do
-            limnos=$(( $limnos + 1 ))
-            karpa=$(( $1 % $limnos ))
-        done
-        if [ $limnos -eq $1 ]
-        then
-            exit 0
-        else
-            exit 1
-        fi
-    fi
-}
+#!/bin/sh
 
 if [ $1 -gt 0 ]
 then
