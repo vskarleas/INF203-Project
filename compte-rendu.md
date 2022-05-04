@@ -2,13 +2,14 @@
 
 ## Introduction
 
-On the UE course of INF203 under the general idea of learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.
+On the UE course of INF203 under the general idea of
+learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.On the UE course of INF203 under the general idea of learning the basic commands of BASH and having an introduction at the C language programming, we are forced to develop two different projects using BASH (Shell scripting) for the first phase as well as C for the rest of the phases and following the different programming techniques as well as skills that we developed during this semester. Below are written the indications that we needed to follow, the procedure that we followed in order to resolve any problems, as well as a summary of the problems / difficulties that we met. Our goal through this project is to explore smart applications of functions in these two essential programming languages while we are staying focused on the indications given by the project’s paper.
 
 ## Indications
 
 **Phase 1 (Bash)**
 
-By using the cowsay library of Bash (to be installed) we need to propose several scripts that perform the following actions mentioned below. In the scripts below, the goal is to use dynamic listing of content, directed to cowsay printing function. We are required to create seven scripts. More specifically:
+By using the cowsay library of Bash (to be installed) we need to propose several scripts that perform the following actions mentioned below. In the scripts below, the goal is to use dynamic listing of content, directed to cowsay printing function. We are required to create seven scripts. More specificallyBy using the cowsay library of Bash (to be installed) we need to propose several scripts that perform the following actions mentioned below. In the scripts below, the goal is to use dynamic listing of content, directed to cowsay printing function. We are required to create seven scripts. More specificall:
 
 1. cow kindergarten
 2. cow primaryschool
@@ -33,17 +34,22 @@ that is specified as argument from the user (ex: ./cow_primaryschool 15).
 
 ![cow representation](image/compte-rendu/1651599767399.png)
 
-*crazy cow*: On the project is mentioned to leave our imagination free and create a script. We decided to create a feedback program for a website. The cow poses several questions to the user after he is automatically redirected on the website, saves the responses (0 to 5) and according to level of satisfaction, it may ask for further feedback. Last but not least, before it terminates the feedback survey, the program prints a dynamic message according to user’s overall review.
+*crazy cow*: On the project is mentioned to leave our imagination free and create a script. We decided to create a feedback program for a website. The cow poses several questions to the user after he is automatically redirected on the website, saves the responses (0 to 5) and according to level of satisfaction, it may ask for further feedback. Last but not least, before it terminates the feedback survey, the program prints a dynamic message according to user’s overall review
 
 **Phase 2 (C)**
 
-The general idea was to code the simple functions of the cowsay project that we used on the first Phase of this project. This phase is extending even further by implementing the design of an Automate in the workflow of small video game with the cow where the user needs to feed it according to cow's health. Before that, there are several tasks that need to be performed. More specifically:
+The general idea was to code the simple functions of the
+cowsay project that we used on the first Phase of this project. This phase is extending even further by implementing the design of an Automate in the workflow of small video game with the cow where the user needs to feed it according to cow's health. Before that, there are several tasks that need to be performed. More specifically:
 
-1. Create a function that will print the cow onto the terminal
+1. Create a function that will print the cow onto the
+   terminal
 2. Add some more functionality on the cow by giving the ability to have modifiable eyes. In that case several tests need to be done.
-3. Let our imagination to make something intresting. We decided to take inspiration from some ASCII art examples. So we designed a program which take as argument a number between 1 and 9 and then it counts down starting from the given time. Every second appears on the screen to corresponding second ont he cown-down time with an ASCII representation. When the time is up, our cow appears that says "Coucou! Hello world!".
-4. The idea to create an animated cow by using the given functions void update() and gotoxy(x,y).
-5. The program needs to read from a file its content (the file's name is given as an aurgument) and the cow needs to print caracter par caracter the correspondinf caracter on its mouth and then save it on the text's bubble above the cow.
+3. Let our imagination to make something intresting. We
+   decided to take inspiration from some ASCII art examples. So we designed a program which take as argument a number between 1 and 9 and then it counts down starting from the given time. Every second appears on the screen to corresponding second on the
+   cown-down time with an ASCII representation. When the time is up, our cow appears that says "Coucou! Hello world!".
+4. The idea to create an animated cow by using the given
+   functions void update() and gotoxy(x,y).
+5. The program needs to read from a file its content (the file's name is given as an aurgument) and the cow needs to print caracter par caracter the corresponding caracter on its mouth and then save it on the text's bubble above the cow.
 
 ## Procedure
 
@@ -54,15 +60,19 @@ As team, we decided to work to the corresponding workflow below:
   1. GitHub: Includes our private repository with all the code that has been submitted by the team members. It tracks the live versions that every team member is watching every time on his personal desktop workstation. Also, GitHub provides a great way to visualize any changes and to restore previous versions of the code.
   2. VSCode: Instead of the direct terminal idle, we decided to work on VSCode since it is a universal development app, with some great extensions to integrate onto the workflow and to visualize better the different commands. In addition to that, it offers a direct connection to our GitHub repository.
   3. W3Schools: Used for classes documentation that we integrated for part c on our separate version (explanation at paragraph Difficulties/Project – section 11).
-* From the first view of the project, we knew that the phase C would be the most complicated one and there was a possibility that we couldn’t be able to make it so far. So, our goal was set to complete as better as possible the rest of the tasks.
-* For every step on the different two phases mentioned above, we decided to follow the “exams technique”. This means, that we will follow the exact steps by including the required elements mentioned on the specific task (function, returned value, required arguments, etc.) as part of project’s understanding. The rest of the code will get completed according to the personal point of view through the understanding process of the task. This will allow us to have the biggest understanding that is possible, for this demanding project.
-* The phase 1 as proposed needs to be completed before the final course of Bash (week before the vacations). We finalized the code for this phase after our return from the vacation.
+* From the first view of the project, we knew that
+  the phase C would be the most complicated one and there was a possibility that we couldn’t be able to make it so far. So, our goal was set to complete as better as possible the rest of the tasks.
+* For every step on the different two phases
+  mentioned above, we decided to follow the “exams technique”. This means, that we will follow the exact steps by including the required elements mentioned on the specific task (function, returned value, required arguments, etc.) as part of project’s understanding. The rest of the code will get completed according to the personal point of view through the understanding process of the task. This will allow us to have the biggest understanding that is possible, for this demanding project.
+* The phase 1 as proposed needs to be completed before the
+  final course of Bash (week before the vacations). We finalized the code for this phase after our return from the vacation.
 
 ## Difficulties/Problems
 
 In this section we are presenting the different challenges that we met and the workflows around them in order to be solved:
 
-1. The first difficulty the we needed to solve was how the smart cow program will understand the expression that it needs to perform. To solve this issue we divided the cases that we will do a filtration with the cut command. Firstly, we save the operator in a variable and then we compare the operator’s variable with the four math expressions.
+1. The first difficulty that we needed to solve was how the smart cow program will understand the expression that it needs to perform. To solve this issue we divided the cases that we will do with a filtration with the cut command. Firstly, we save the operator in a variable
+   and then we compare the operator’s variable with the four math expressions.
 2. Something that is interested is that during our TPs when we needed to do a multiplication we couldn’t do that by using
 
    ```
@@ -74,11 +84,14 @@ In this section we are presenting the different challenges that we met and the w
    ```
    $(( 5 * 4 ))
    ```
-3. When we had to test if a number was Premier on the cow_university exercise, we firstly introduced another function that would check this option but in the end we enddded on integrating the code to the whole program instead.
+3. When we had to test if a number was Premier on the cow_university exercise, we firstly introduced another function that would check this option but in the end we ended on integrating the code to the whole program instead.
 4. Another challenge was the appearance of the cow on the terminal screen (phrase 2). The given ASCII code was a great start but we had to do some modifications with the special caracters that are accepted on the printf command, as well as the fact that we needed to represent it in an one-line printing message by taking into consideration the spaces that were required.
-5. In order to change the eyes caracters we had to pass though several tests. The first one was to check if the first parameter was the correct phrase that would activate the mechanism that will change the eye's characters. Since the argument is parssed via a pointer and we need to compare it with a string, after further examination, we decided to use an strcmpr. Then we are using a safe mechnism that checks if the argument that was parssed for the eye's caracters are specifically 2 caracters only. Last but not least, we modified the affiche_vache function so that it can receive the new caracters for the eyes.
-6. In the imagination project, one challenge that we came across was the fact that we had to use a pointer to access the variabe that has stored the elements that we are comparing the inputed argument for the "-count" scenario, so that we can decode and receive an int that can be used in the for that we have created so that we can do the countdown.
-7. We coudn't understand how to use the gotoxy functions to animate the cow, so we created a sequence of differantiated appearance states of the cow and we added in order so that we can create the illusion that the cow opens and closes the eyes.
+5. In order to change the eyes caracters we had to pass though
+   several tests. The first one was to check if the first parameter was the correct phrase that would activate the mechanism that will change the eye's characters. Since the argument is parsed via a pointer and we need to compare it with a string, after further examination, we decided to use an strcmpr. Then we are using a safe mechnism that checks if the argument that was parsed for the eye's caracters are specifically 2 caracters only. Last but not least, we modified the affiche_vache function so that it can receive the new caracters for the eyes.
+6. In the imagination project, one challenge that we came
+   across was the fact that we had to use a pointer to access the variabe that has stored the elements that we are comparing the inputed argument for the "-count" scenario, so that we can decode and receive an int that can be used in the for that we have created so that we can do the countdown. In teh enddd we decided to parse a seperate scanf to receive the user's input.
+7. We coudn't understand how to use the gotoxy functions to
+   animate the cow, so we created a sequence of differantiated appearance states of the cow and we added in order so that we can create the illusion that the cow opens and closes the eyes.
 8. In different sections on the probelms/scenarios mentioned above, we found that we need to cler the screen and have full control of what we are printing on it. This is how the clear_screen function came to love:
 
    ```
@@ -88,15 +101,19 @@ In this section we are presenting the different challenges that we met and the w
      write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, 12);
    }
    ```
-9. In order to make the cow to stock the said characters form the file we came with the idea to create a list that is initially vide and to concantinate every character that is from our fscanf to this list (table actually). Then we are combinign every character in order to create the whole string that replace the message on the text's bubble.
-10. Designing the automate was one of the most challenging parts not because it was difficult, but because we couldn't understand the connection between the different variables and what we will have as an output of every state's change. After having started by designing the automate with basic states the number of available stockage, this lead us to a huge list of subcategories and exceptions, but on the same time we understood what it was expected to do on the same place. This is how we understood the video game's logic and we arrived on the following automate:
+9. We have observed that when we arew using this function, always on the upper left corner there is a constant caracter that is presented that maybe comes from the cached memory since it is not related to the code at all.
+10. In order to make the cow to stock the said
+    characters from the file we came in with the idea to create a list that is initially vide and to concantinate every character that is from our fscanf to this list (table actually). Then we are combining every character in order to create the whole string that replace the message on the text's bubble.
+11. Designing the automate was one of the most challenging parts
+    not because of its difficulty, but because we couldn't understand the connection between the different variables and what we will have as an output of every state's change. After having started by designing the automate with basic states the number of available stockage, this lead us to a huge list of subcategories and exceptions, but at the same time we understood what was expected to do on the same place. This is how we understood the video game's logic and we arrived on the following automate:
     ![cow representation](image/compte-rendu/automate.drawio.png)
-11. We need to mention that the operation that creates random numbers needed some further research so that we find how exactly it selects the random numbers. So we arrived at the following form:
+12. We need to mention that the operation that creates random numbers needed some further research so we findexactly how it selects the random numbers. So we arrived at the following form:
 
     ```
     rand()%(end+1-start)+start;
     ```
-12. On our automate's program we used a hybrid model of the systax. Instead of using a pointer to change the local variable that we initialised like the fitness and stock variables, we are redefining them with a call to the respective functions and by saving the result the variable with the same name. We could definitely write it with pointers but it was more visible to us how we are going to treat the different cases and how to find out when there is a game over or an endd of the game to a parameter.
+13. On our automate's program we used a hybrid model
+    of the systax. Instead of using a pointer to change the local variable that we initialised like the fitness and stock variables, we are redefining them with a call to the respective functions and by saving the result of the variable with the same name. We could definitely write it with pointers but it was more visible to us for how we are going to treat the different cases and for how to find out when there is a game over or an end of the game to a parameter.
 
 ## Code
 
@@ -571,23 +588,7 @@ int main(int argc, char *argv[]){
     int i,k,j;
     k = argc;
     if (k-1 == 2) {
-        if (!strcmp(argv[1],"-count")) {
-            for (i=0; code[i]!='\0'; i++){
-                if (!strcmp(argv[2],&code[i])){
-                    k=i;
-                    break;
-                }
-            }
-            clearScreen();
-            for (j=k; j>=0;) {
-                one(j);
-                sleep(2);
-                clearScreen();
-                j--;
-            }
-            affiche_vache("Coucou! Hello world");
-        }
-        else if (!strcmp(argv[1],"-e")){
+       if (!strcmp(argv[1],"-e")){
             int i,totChar;
             totChar = 0;
             for(i=0; argv[2][i] != '\0'; i++){
@@ -602,7 +603,21 @@ int main(int argc, char *argv[]){
         }
     }
     else {
-        affiche_vache(argv[1]);
+        if (!strcmp(argv[1],"-count")) {
+            printf("Donner un nombre entre 0 et 9\n");
+            scanf("%d", &k);
+            clearScreen();
+            for (j=k; j>=0;) {
+                one(j);
+                sleep(1);
+                clearScreen();
+                j--;
+            }
+            affiche_vache("Coucou! Hello world");
+        }
+        else {
+            affiche_vache(argv[1]);
+        }
     }
 }
 ```
@@ -867,7 +882,6 @@ int main(){
     printf("La vache etait en vie pour %d jours\n", duree_de_vie);
 }
 ```
-
 
 ---
 

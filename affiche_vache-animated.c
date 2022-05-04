@@ -14,37 +14,20 @@ void clearScreen()
 void affiche_vache(){
     printf("   ^__^\n   (oo)\\_______\n   (__)\\       )\\/\\\n       ||----w |\n       ||     ||\n");
 }
+
+
  void update(){printf("\033[H\033[J\n");}
  void gotoxy(x,y){printf("\033[%d;%dH\n",x,y);} //5 is lines and 50 are spaces
 
  int main(){
-    int i;
-    for (i=0; i<20; i++){
-    clearScreen();
-    affiche_vache_simple();
-    sleep(4);
-    clearScreen();
-    affiche_vache();
-    sleep(1);
-    clearScreen();
-    affiche_vache_simple();
-    sleep(1);
-    clearScreen();
-    affiche_vache();
-    sleep(2);
-    clearScreen();
-    affiche_vache_simple();
-    sleep(5);
-    clearScreen();
-    affiche_vache();
-    sleep(1);
-    clearScreen();
-    affiche_vache_simple();
-    sleep(2);
-    clearScreen();
-    affiche_vache();
-    sleep(3);
-    clearScreen();
-    affiche_vache_simple();
-    }
+   int i=0;
+   int y=0;
+  update();
+   while (10>0){
+     sleep(1);
+     gotoxy(i,y);
+     affiche_vache_simple();
+     i--;
+     y++;
+   }
  }
