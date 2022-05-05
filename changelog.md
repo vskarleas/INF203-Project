@@ -62,3 +62,9 @@
 
 * Project is completed with Automate
 * Remains to finalise the animation question and the compte rendu.
+
+Versiomn 6.3.7
+
+* Merges completed
+* Compte rendu completed
+*

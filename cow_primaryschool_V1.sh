@@ -9,3 +9,4 @@ do
    clear
    a=`expr $a + 1`
 done
+cowsay -T \U 1

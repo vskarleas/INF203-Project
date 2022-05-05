@@ -63,8 +63,11 @@ As team, we decided to work to the corresponding workflow below:
   the phase C would be the most complicated one and there was a possibility that we couldn’t be able to make it so far. So, our goal was set to complete as better as possible the rest of the tasks.
 * For every step on the different two phases
   mentioned above, we decided to follow the “exams technique”. This means, that we will follow the exact steps by including the required elements mentioned on the specific task (function, returned value, required arguments, etc.) as part of project’s understanding. The rest of the code will get completed according to the personal point of view through the understanding process of the task. This will allow us to have the biggest understanding that is possible, for this demanding project.
-* The phase 1 as proposed needs to be completed before the
-  final course of Bash (week before the vacations). We finalized the code for this phase after our return from the vacation.
+* The phase 1 as proposed needs to be completed before the final course of Bash (week before the vacations). We finalized the code for this phase after our return from the vacation.
+
+**There was a merge of programs between the members that came and collaborated together. So, on our code section are included in several parts two versions of the code. The second version was produced with the mergion of the different programs from the team members and it is the most optimised.**
+
+**This means that the whenever exist version 2 of a program, is the version that we were keeping updated and it's the one that we propose as program for the coresponding exercise.**
 
 ## Difficulties/Problems
 
@@ -84,14 +87,14 @@ In this section we are presenting the different challenges that we met and the w
    $(( 5 * 4 ))
    ```
 3. When we had to test if a number was Premier on the cow_university exercise, we firstly introduced another function that would check this option but in the end we ended on integrating the code to the whole program instead.
-4. Another challenge was the appearance of the cow on the terminal screen (phrase 2). The given ASCII code was a great start but we had to do some modifications with the special caracters that are accepted on the printf command, as well as the fact that we needed to represent it in an one-line printing message by taking into consideration the spaces that were required.
-5. In order to change the eyes caracters we had to pass though
-   several tests. The first one was to check if the first parameter was the correct phrase that would activate the mechanism that will change the eye's characters. Since the argument is parsed via a pointer and we need to compare it with a string, after further examination, we decided to use an strcmpr. Then we are using a safe mechnism that checks if the argument that was parsed for the eye's caracters are specifically 2 caracters only. Last but not least, we modified the affiche_vache function so that it can receive the new caracters for the eyes.
-6. In the imagination project, one challenge that we came
+4. On the smart_cow the multiplication function do not work always. There are times that it works and other times that it doesn't work. The systex of the given expression argument must be of type "3 + 10" for instance and not "3+10" or 3+10.
+5. Another challenge was the appearance of the cow on the terminal screen (phrase 2). The given ASCII code was a great start but we had to do some modifications with the special caracters that are accepted on the printf command, as well as the fact that we needed to represent it in an one-line printing message by taking into consideration the spaces that were required.
+6. In order to change the eyes caracters we had to pass though several tests. The first one was to check if the first parameter was the correct phrase that would activate the mechanism that will change the eye's characters. Since the argument is parsed via a pointer and we need to compare it with a string, after further examination, we decided to use an strcmpr. Then we are using a safe mechnism that checks if the argument that was parsed for the eye's caracters are specifically 2 caracters only. Last but not least, we modified the affiche_vache function so that it can receive the new caracters for the eyes.
+7. In the imagination project, one challenge that we came
    across was the fact that we had to use a pointer to access the variabe that has stored the elements that we are comparing the inputed argument for the "-count" scenario, so that we can decode and receive an int that can be used in the for that we have created so that we can do the countdown. In teh enddd we decided to parse a seperate scanf to receive the user's input.
-7. We coudn't understand how to use the gotoxy functions to
+8. We coudn't understand how to use the gotoxy functions to
    animate the cow, so we created a sequence of differantiated appearance states of the cow and we added in order so that we can create the illusion that the cow opens and closes the eyes.
-8. In different sections on the probelms/scenarios mentioned above, we found that we need to cler the screen and have full control of what we are printing on it. This is how the clear_screen function came to love:
+9. In different sections on the probelms/scenarios mentioned above, we found that we need to cler the screen and have full control of what we are printing on it. This is how the clear_screen function came to love:
 
    ```
    void clearScreen()
@@ -100,25 +103,25 @@ In this section we are presenting the different challenges that we met and the w
      write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, 12);
    }
    ```
-9. We have observed that when we arew using this function, always on the upper left corner there is a constant caracter that is presented that maybe comes from the cached memory since it is not related to the code at all.
-10. In order to make the cow to stock the said
+10. We have observed that when we arew using this function, always on the upper left corner there is a constant caracter that is presented that maybe comes from the cached memory since it is not related to the code at all.
+11. In order to make the cow to stock the said
     characters from the file we came in with the idea to create a list that is initially vide and to concantinate every character that is from our fscanf to this list (table actually). Then we are combining every character in order to create the whole string that replace the message on the text's bubble.
-11. Designing the automate was one of the most challenging parts
+12. Designing the automate was one of the most challenging parts
     not because of its difficulty, but because we couldn't understand the connection between the different variables and what we will have as an output of every state's change. After having started by designing the automate with basic states the number of available stockage, this lead us to a huge list of subcategories and exceptions, but at the same time we understood what was expected to do on the same place. This is how we understood the video game's logic and we arrived on the following automate:
     ![cow representation](image/compte-rendu/automate.drawio.png)
-12. We need to mention that the operation that creates random numbers needed some further research so we findexactly how it selects the random numbers. So we arrived at the following form:
+13. We need to mention that the operation that creates random numbers needed some further research so we findexactly how it selects the random numbers. So we arrived at the following form:
 
     ```
     rand()%(end+1-start)+start;
     ```
-13. On our automate's program we used a hybrid model
+14. On our automate's program we used a hybrid model
     of the systax. Instead of using a pointer to change the local variable that we initialised like the fitness and stock variables, we are redefining them with a call to the respective functions and by saving the result of the variable with the same name. We could definitely write it with pointers but it was more visible to us for how we are going to treat the different cases and for how to find out when there is a game over or an end of the game to a parameter.
 
 ## Code
 
 ### cow_kindergarten
 
-Version 1
+#### Version 1
 
 ```
 numbers="1 2 3 4 5 6 7 8 9 10"
@@ -132,7 +135,25 @@ do
 done
 ```
 
+#### Version 2
+
+```
+#!/bin/bash 
+
+i=10
+while [ $i -ne 1 ] 
+do 
+    cowsay $i
+    ((i--))
+    sleep 1
+    clear
+done 
+cowsay -T \U  1
+```
+
 ### cow_primaryschool
+
+#### Version 1
 
 ```
 #!/bin/sh
@@ -146,10 +167,27 @@ do
    clear
    a=`expr $a + 1`
 done
+```
 
+#### Version 2
+
+```
+#!/bin/bash 
+
+i=$1
+while [ $i -ne 1 ] 
+do 
+    cowsay $i
+    ((i--))
+    sleep 1
+    clear
+done 
+cowsay -T \U 1
 ```
 
 ### cow_highschool
+
+#### Version 1
 
 ```
 #!/bin/sh
@@ -166,7 +204,24 @@ do
 done
 ```
 
+#### Version 2
+
+```
+#!/bin/bash 
+
+i=$1
+while [ $i -ne 1 ] 
+do 
+    n=$(($i * $i))
+    cowsay $n
+    ((i--))
+done 
+cowsay -T \U 1
+```
+
 ### cow_college
+
+#### Version 1
 
 ```
 clear
@@ -204,95 +259,75 @@ else
 fi
 ```
 
+#### Version 2
+
+```
+#!/bin/bash 
+
+n=$1
+a=0
+b=1
+for ((i=0; i<n; i++))
+do
+        fn=$(($a + $b))
+        a=$b
+        b=$fn
+        cowsay $fn
+done
+ fn=$(($a + $b))
+    a=$b
+    b=$fn
+    cowsay -T \U $fn
+```
+
 ### cow_university
+
+#### Version 1
+
+```
+#!/bin/bash 
+
+n=$1
+
+for ((i=2;i<n; i++))
+do 
+    mod=$(expr $n%$i)
+    if [ $mod -ne 0 ]
+    then 
+        cowsay $i
+    fi
+done
+```
+
+#### Version 2
 
 ```
 #!/bin/sh
 
 if [ $1 -gt 0 ]
 then
+    num=$1
     for i in $1
     do
         limnos=2
-        if [ $1 -gt 0 ]
-        then
-            karpa=$(( $1 % $i ))
-            while [ $limnos < $1 -a $karpa -ne 0 ]
-            do
-                limnos=$(( $limnos + 1 ))
-                karpa=$(( $1 % $limnos ))
-            done
-            if [ $limnos -eq $1 ]
-            then
-                lamda=0
-            else
-                lamda=1
-            fi
-        fi
-        if [ $lamda -eq 0 ]
-        then
-            cowsay $i is premier
-            sleep 3
-            clear
-        else
-            cowsay $i is NOT premier
-            sleep 3
-            clear
-        fi
-    done
-else
-    echo We need a positive number
-    echo Operation terminated
-fi
-isPremier(){
-    limnos=2
-    if [ $1 -gt 0 ]
-    then
-        karpa=$(( $1 % $i ))
-        while [ $limnos < $1 -a $karpa -ne 0 ]
+        karpa=$(( $num % $i ))
+        while [ $limnos < $num -a $karpa -ne 0 ]
         do
             limnos=$(( $limnos + 1 ))
             karpa=$(( $1 % $limnos ))
         done
-        if [ $limnos -eq $1 ]
+        if [ $limnos -eq $num ]
         then
-            exit 0
+            lamda=0
         else
-            exit 1
+            lamda=1
         fi
-    fi
-}
 
-if [ $1 -gt 0 ]
-then
-    for i in $1
-    do
-        limnos=2
-        if [ $1 -gt 0 ]
-        then
-            karpa=$(( $1 % $i ))
-            while [ $limnos < $1 -a $karpa -ne 0 ]
-            do
-                limnos=$(( $limnos + 1 ))
-                karpa=$(( $1 % $limnos ))
-            done
-            if [ $limnos -eq $1 ]
-            then
-                lamda=0
-            else
-                lamda=1
-            fi
-        fi
         if [ $lamda -eq 0 ]
         then
-            cowsay $i is premier
-            sleep 3
-            clear
-        else
-            cowsay $i is NOT premier
-            sleep 3
-            clear
+            cowsay $num
         fi
+        num=$num-1
     done
 else
     echo We need a positive number
@@ -302,8 +337,22 @@ fi
 
 ### smart_cow
 
+#### Version 1
+
 ```
-echo $1
+#!/bin/bash 
+
+a=$1 
+b=$2 
+mtp=$(expr $a \* $b)
+cowsay -e $mtp $a*$b 
+```
+
+#### Version 2
+
+```
+#!/bin/bash
+
 kappa=$(echo $1 | cut -d" " -f 2)
 if [ "$kappa" == "+" ]
 then
@@ -311,34 +360,36 @@ then
     n1=$(echo $1 | cut -d+ -f 1)
     n2=$(echo $1 | cut -d+ -f 2)
     lamda=$(expr $n1 + $n2)
-    cowsay "$1 = $lamda"
+    cowsay -e $lamda $1
 elif [ "$kappa" == "-" ]
 then
     echo -
     n1=$(echo $1 | cut -d- -f 1)
     n2=$(echo $1 | cut -d- -f 2)
     lamda=$(expr $n1 - $n2)
-    cowsay "$n1-$n2=$lamda"
+    cowsay -e $lamda $1
 elif [ "$kappa" == "/" ]
 then
     echo /
     n1=$(echo $1 | cut -d/ -f 1)
     n2=$(echo $1 | cut -d/ -f 2)
     lamda=$(expr $n1 / $n2)
-    cowsay "$1 = $lamda"
+    cowsay -e $lamda $1
 else
-    n1=$(echo $1 | cut -d\* -f 1)
-    n2=$(echo $1 | cut -d]\* -f 2)
+    n1=$(echo $1 | cut -d" " -f 1)
+    n2=$(echo $1 | cut -d" " -f 3)
     echo $n1
     echo $n2
-    lamda=$(( $n1 * $n2))
-    cowsay "$n1 \* $n2 = $lamda"
+    lamda=$(expr $a \* $b)
+    cowsay -e $lamda $1
 fi
 ```
 
 ### crazy_cow
 
 ```
+#!/bin/bash
+
 clear
 echo Before we start, which is your name ?
 read name
@@ -470,7 +521,7 @@ then
     fi
   fi
   clear
-  cowsay "Thank you very much for your time $name! Below you will find a sum up of your responses. If you need change something, you will have the option to restart the survey."
+  cowsay "Thank you very much for your time $name! Have a nice day."
 
 else
   echo "Ok, bye!"
@@ -525,6 +576,8 @@ int main(int argc, char *argv[]){
 ```
 
 ### newcow-imagination
+
+To access the imagination action, please use the argument -count and then you will be asked for a number. Follow th einstructions on screen. On the program is also integrated the option for the eyes argument.
 
 ```
 #include <stdio.h>
@@ -625,60 +678,155 @@ int main(int argc, char *argv[]){
 
 ### affiche_vache-animated
 
+After the program is compilled, it requires a number as argument during execution.
+
 ```
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-void affiche_vache_simple(){
-    printf("   ^__^\n   (00)\\_______\n   (__)\\       )\\/\\\n       ||----w |\n       ||     ||\n");
+#include <stdio.h>
+
+void update () { printf ("\033[H\033[J");}
+void gotoxy (x ,y) { printf (" \033[%d;%dH",x , y) ;}
+
+void affiche_vache(int i){
+    gotoxy(i+1,i+15);
+    printf( "\\ ^__ ^\n");
+    gotoxy(i+1,i+15);
+    printf("\\  (00) \\ _______ \n");
+    gotoxy(i+2,i+15);
+    printf("   (__) \\         ) \\/\\\n");
+    gotoxy(i+3,i+15);
+    printf("       || - - - -w |\n");
+    gotoxy(i+4,i+15);
+    printf("       ||         ||\n" );
 }
 
-void clearScreen()
-{
-  const char *CLEAR_SCREEN_ANSI = "\e[1;1H\e[2J";
-  write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, 12);
-}
-
-void affiche_vache(){
-    printf("   ^__^\n   (oo)\\_______\n   (__)\\       )\\/\\\n       ||----w |\n       ||     ||\n");
-}
- void update(){printf("\033[H\033[J\n");}
- void gotoxy(x,y){printf("\033[%d;%dH\n",x,y);} //5 is lines and 50 are spaces
-
- int main(){
-    int i;
-    for (i=0; i<20; i++){
-    clearScreen();
-    affiche_vache_simple();
-    sleep(4);
-    clearScreen();
-    affiche_vache();
-    sleep(1);
-    clearScreen();
-    affiche_vache_simple();
-    sleep(1);
-    clearScreen();
-    affiche_vache();
-    sleep(2);
-    clearScreen();
-    affiche_vache_simple();
-    sleep(5);
-    clearScreen();
-    affiche_vache();
-    sleep(1);
-    clearScreen();
-    affiche_vache_simple();
-    sleep(2);
-    clearScreen();
-    affiche_vache();
-    sleep(3);
-    clearScreen();
-    affiche_vache_simple();
+void affiche_fruit(int i){
+    gotoxy(i,i);
+    printf(" ,--./,-.\n");
+    gotoxy(i+1,i);
+    printf("/ #      \\\n");
+    gotoxy(i+2,i);
+    printf("|        |\n");
+    gotoxy(i+3,i);
+    printf("\\        / \n");
+    gotoxy(i+4,i);
+    printf(" `._,._,'\n");
     }
- }
+
+    void affiche_fruit_manger(int i){
+        gotoxy(i,i);
+        printf(" ,--./,-.\n");
+        gotoxy(i+1,i);
+        printf("/,-._.--~\\\n");
+        gotoxy(i+2,i);
+        printf(" __}  {\n");
+        gotoxy(i+3,i);
+        printf("\\`-._,-`-,\n");
+        gotoxy(i+4,i);
+        printf("`._,._,'\n");
+    }
+
+void cow(char *arg_e, char *arg_T, char *espace){
+    printf("%s^__^ \n\
+%s(%s)\\ _______ \n\
+%s(__)\\         )\\/\\\n\
+%s %s  ||------w |\n\
+%s    ||       ||\n",espace, espace, arg_e, espace, espace, arg_T, espace);
+}
+ 
+void cow2(char *arg_e, char *arg_T, char *espace){
+    printf("%s^__^ \n\
+%s(%s)\\ _______ \n\
+%s(__)\\         )\\/\\\n\
+%s %s  /|------w |\n\
+%s    \\|       \\|\n",espace, espace, arg_e, espace, espace, arg_T, espace);
+}
+
+void cow3(char *arg_e, char *arg_T, char *espace){
+ printf("%s^__^ \n\
+%s(%s)\\ _______ \n\
+%s(  )\\         )\\/\\\n\
+%s U  ||------w |\n\
+%s %s  ||       ||\n",espace, espace, arg_e, espace, espace, arg_T, espace);
+}
+
+
+ 
+int main(int argc, char *argv[]){
+    int coord; 
+    sscanf(argv[1], "%d", &coord);
+    long pos_e = -1;
+    long pos_T = -1;
+ 
+    char eye[10] = "oo";
+    char eye2[10] ="00";
+    char tongue[200] = " ";
+  
+ 
+    for (int i = 1; i < argc; i++){
+        if (strcmp(argv[i],"-e") == 0){
+            pos_e = i + 1;
+            strcpy(eye, argv[pos_e]);
+        }
+        else if (strcmp(argv[i], "-T") == 0){
+            pos_T = i + 1;
+            strcpy(tongue, argv[pos_T]);
+        }
+    }
+    char espace[20000] = "                                                    ";
+  
+    for (int k = 0; k <= 2; k++){
+        if (k == 0){
+        update();
+        affiche_fruit(coord);
+        sleep(1);
+        cow(eye, tongue, espace);
+        sleep(1);
+        update();
+        affiche_fruit(coord);
+        cow2(eye2, tongue, espace);
+        sleep(1);}
+
+        else if(k==2){
+            update();
+            affiche_fruit(coord);
+            cow3(eye2, tongue, espace);
+            sleep(2);
+            update();
+            affiche_fruit_manger(coord);
+            cow(eye2, tongue, espace);
+            sleep(2);
+            update();
+            affiche_fruit_manger(coord);
+            cow(eye, tongue, espace);
+        }
+        else{
+            update();
+            affiche_fruit(coord);
+            cow(eye2, tongue, espace);
+            sleep(1);
+            update();
+            affiche_fruit(coord);
+            cow2(eye2, tongue, espace);
+            sleep(1);
+            update();
+            affiche_fruit(coord);
+            cow(eye2, tongue, espace);
+            sleep(2);
+        }
+        for (int j = 0; j < strlen(espace); j++)
+            strcpy(&espace[j], &espace[j+1]);
+    }
+}
 ```
 
+*NOTE*: The terminal may give this error "illegal hardware instruction" to MacOS computers due to an architecture uncompability since MacOS uses its own built C library while Ubunutu and Windows computers take the ressources from the C Foundation.
+
 ### reading_cow
+
+You can use the fichier.auto that is included with the project's zip file.
 
 ```
 #include <stdio.h>

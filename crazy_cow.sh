@@ -129,7 +129,7 @@ then
     fi
   fi
   clear
-  cowsay "Thank you very much for your time $name! Below you will find a sum up of your responses. If you need change something, you will have the option to restart the survey."
+  cowsay "Thank you very much for your time $name! Have a nice day."
 
 else
   echo "Ok, bye!"
